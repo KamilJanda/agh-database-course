@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="hibernate.cfg.xml/Hibernate">
+  <database-model serializer="dbm" rdbms="DERBY" format-version="4.11">
+    <root id="1">
+      <ServerVersion>10.14</ServerVersion>
+    </root>
+    <schema id="2" parent="1" name="APP">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="NULLID"/>
+    <schema id="4" parent="1" name="SQLJ"/>
+    <schema id="5" parent="1" name="SYS"/>
+    <schema id="6" parent="1" name="SYSCAT"/>
+    <schema id="7" parent="1" name="SYSCS_DIAG"/>
+    <schema id="8" parent="1" name="SYSCS_UTIL"/>
+    <schema id="9" parent="1" name="SYSFUN"/>
+    <schema id="10" parent="1" name="SYSIBM"/>
+    <schema id="11" parent="1" name="SYSPROC"/>
+    <schema id="12" parent="1" name="SYSSTAT"/>
+    <table id="13" parent="2" name="CATEGORY"/>
+    <table id="14" parent="2" name="INVOICE"/>
+    <table id="15" parent="2" name="PRODUCT"/>
+    <table id="16" parent="2" name="PRODUCT_INVOICE"/>
+    <table id="17" parent="2" name="SUPPLIER"/>
+    <column id="18" parent="13" name="CATEGORYID">
+      <Position>1</Position>
+      <DataType>INTEGER|4s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="19" parent="13" name="NAME">
+      <Position>2</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <index id="20" parent="13" name="SQL181128213113450">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>CATEGORYID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="21" parent="13" name="SQL181128213113450">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>CATEGORYID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="22" parent="14" name="INVOICENUMBER">
+      <Position>1</Position>
+      <DataType>INTEGER|4s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="23" parent="14" name="QUANTITY">
+      <Position>2</Position>
+      <DataType>INTEGER|4s</DataType>
+    </column>
+    <index id="24" parent="14" name="SQL181128213113480">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>INVOICENUMBER</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="25" parent="14" name="SQL181128213113480">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>INVOICENUMBER</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="26" parent="15" name="PRODUCTID">
+      <Position>1</Position>
+      <DataType>INTEGER|4s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="27" parent="15" name="PRODUCTNAME">
+      <Position>2</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="28" parent="15" name="UNITSONSTOCK">
+      <Position>3</Position>
+      <DataType>INTEGER|4s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="29" parent="15" name="CATEGORY_FK">
+      <Position>4</Position>
+      <DataType>INTEGER|4s</DataType>
+    </column>
+    <column id="30" parent="15" name="SUPPLIER_FK">
+      <Position>5</Position>
+      <DataType>INTEGER|4s</DataType>
+    </column>
+    <index id="31" parent="15" name="SQL181128213113500">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>PRODUCTID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="32" parent="15" name="SQL181128213113620">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>CATEGORY_FK</ColNames>
+    </index>
+    <index id="33" parent="15" name="SQL181128213113640">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>SUPPLIER_FK</ColNames>
+    </index>
+    <key id="34" parent="15" name="SQL181128213113500">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>PRODUCTID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="35" parent="15" name="FKPURGJJ563MV2VAV0MGGDXEFD7">
+      <ColNames>CATEGORY_FK</ColNames>
+      <RefSchemaName>APP</RefSchemaName>
+      <RefTableName>CATEGORY</RefTableName>
+      <RefKeyName>SQL181128213113450</RefKeyName>
+      <RefColNames>CATEGORYID</RefColNames>
+    </foreign-key>
+    <foreign-key id="36" parent="15" name="FKEURY2HXL2J8URLKMW36585TKR">
+      <ColNames>SUPPLIER_FK</ColNames>
+      <RefSchemaName>APP</RefSchemaName>
+      <RefTableName>SUPPLIER</RefTableName>
+      <RefKeyName>SQL181128213113600</RefKeyName>
+      <RefColNames>SUPPLIERID</RefColNames>
+    </foreign-key>
+    <column id="37" parent="16" name="PRODUCTS_PRODUCTID">
+      <Position>1</Position>
+      <DataType>INTEGER|4s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="38" parent="16" name="INVOICES_INVOICENUMBER">
+      <Position>2</Position>
+      <DataType>INTEGER|4s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="39" parent="16" name="SQL181128213113520">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>PRODUCTS_PRODUCTID
+INVOICES_INVOICENUMBER</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="40" parent="16" name="SQL181128213113680">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>PRODUCTS_PRODUCTID</ColNames>
+    </index>
+    <index id="41" parent="16" name="SQL181128213113660">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>INVOICES_INVOICENUMBER</ColNames>
+    </index>
+    <key id="42" parent="16" name="SQL181128213113520">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>PRODUCTS_PRODUCTID
+INVOICES_INVOICENUMBER</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="43" parent="16" name="FK48U36DTRSGCW4GLP8KGNRFIM7">
+      <ColNames>PRODUCTS_PRODUCTID</ColNames>
+      <RefSchemaName>APP</RefSchemaName>
+      <RefTableName>PRODUCT</RefTableName>
+      <RefKeyName>SQL181128213113500</RefKeyName>
+      <RefColNames>PRODUCTID</RefColNames>
+    </foreign-key>
+    <foreign-key id="44" parent="16" name="FKP936K24T5SKHGEM0JDV6LENEF">
+      <ColNames>INVOICES_INVOICENUMBER</ColNames>
+      <RefSchemaName>APP</RefSchemaName>
+      <RefTableName>INVOICE</RefTableName>
+      <RefKeyName>SQL181128213113480</RefKeyName>
+      <RefColNames>INVOICENUMBER</RefColNames>
+    </foreign-key>
+    <column id="45" parent="17" name="SUPPLIERID">
+      <Position>1</Position>
+      <DataType>INTEGER|4s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="46" parent="17" name="CITY">
+      <Position>2</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="47" parent="17" name="COMPANYNAME">
+      <Position>3</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="48" parent="17" name="STREET">
+      <Position>4</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <index id="49" parent="17" name="SQL181128213113600">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>SUPPLIERID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="50" parent="17" name="SQL181128213113600">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>SUPPLIERID</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
