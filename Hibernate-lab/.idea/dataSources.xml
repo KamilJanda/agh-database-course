@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="hibernate.cfg.xml/Hibernate" uuid="da8ba597-fe7e-43ba-81fc-8890df3ea74f">
+      <driver-ref>derby.remote</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate
+
+/Users/kamil/Documents/AGH/bazy/Hibernate-lab/src/hibernate.cfg.xml</remarks>
+      <jdbc-driver>org.apache.derby.jdbc.ClientDriver</jdbc-driver>
+      <jdbc-url>jdbc:derby://127.0.0.1/IJandaJPA</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="myDatabaseConfig/Hibernate" uuid="3caf309f-46f0-4b09-a0d8-27bf841d9282">
+      <driver-ref>derby.remote</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate
+
+/Users/kamil/Documents/AGH/bazy/Hibernate-lab/src/META-INF/persistence.xml</remarks>
+      <jdbc-driver>org.apache.derby.jdbc.ClientDriver</jdbc-driver>
+      <jdbc-url>jdbc:derby://127.0.0.1/IJandaJPA</jdbc-url>
+    </data-source>
+  </component>
+</project>
